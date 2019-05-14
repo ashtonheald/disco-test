@@ -1,0 +1,367 @@
+/*
+Developer: Tyler Gilbert
+Table of Contents
+HEADER - Site logo, Navigation
+MAINCONTENT - Description about band, listen button, latest album, newsletter
+FOOTER - Copyright
+Color Palette
+#cb2e34 - Mahogany
+#f5d62b - Golden Dream
+#1b1818 - Nero
+#3461b3 - Cerulean Blue
+#416b28 - Dell
+*/
+
+/* Body */
+
+#home {
+	background: #00bfff;
+  height: 100%;
+}
+
+#home h2 {
+  color: #fff;
+}
+
+#home label {
+  color: #fff;
+}
+
+#recent:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background: url("../images/wonderful-bg.jpg") no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#recent {
+	text-align: center;
+}
+
+#recent h1 {
+	color: #fff;
+}
+#recent a {
+	font-size: 2em;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;	
+}
+#recent a:hover {
+	color: #416b28;
+}
+
+#about {
+  background: #fff;
+  width: 610px;
+  margin: auto;
+}
+
+/* Newsletter */
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+select.frecuency {
+    border: none;
+    font-style: italic;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+    border-bottom: none;
+}
+select.frecuency:focus {
+    outline: none;
+    border-bottom: 5px solid #22313F;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+}
+.free {
+    text-transform: uppercase;
+}
+.input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+input.btn.btn-lg {
+    width: 60%;
+    height: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+button.btn {
+    width: 40%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.promise {
+    color: #999;
+}
+
+footer {
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+  background-color: #00bfff;
+}
+
+h1 {
+	text-align: center;
+}
+
+body.albums, body.about {
+	background-color: #00bfff;
+}
+
+img.logo, img.recent {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.image-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px;
+  border: 3px solid #cb2e34;
+}
+
+img.wonderful {
+	width: 450px;
+	height: 390px;
+}
+
+/* Albums */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+body {
+  background: #dce1df;
+  color: #4f585e;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+div.cards {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center;
+}
+div.card {
+  background: #ffffff;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  position: relative;
+  text-align: left;
+  -webkit-transition: all 0.3s 0s ease-in;
+  transition: all 0.3s 0s ease-in;
+  z-index: 1;
+}
+div.card-album:nth-child(-n+3){
+  height: 1280px;
+}
+div.card-album:nth-child(4),div.card-album:nth-child(5),div.card-album:nth-child(6){
+  height: 1880px;
+}
+div.card-album:nth-last-child(-n+3){
+  height: 1300px;
+}
+div.card img {
+  max-width: 300px;
+}
+div.card div.card-title {
+  background: #ffffff;
+  padding: 6px 15px 10px;
+  position: relative;
+  z-index: 0;
+}
+div.card div.card-title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+  padding: 0;
+}
+div.card div.card-title h2 small {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+div.card div.card-description {
+  padding: 0 15px 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+/* Media Queries */
+/* iPhone 4 and 4S */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+	#navigation {
+		font-size: 16px;
+	}
+
+	#navigation-albums, #navigation-about {
+		font-size: 16px;
+	}
+
+	img.logo, img.recent {
+		width: 300px;
+	}
+
+	img.image-about {
+		width: 300px;
+	}
+
+	img.wonderful {
+		width: 250px;
+		height: 190px;
+	}
+}
+div.card-album{
+  height: auto;
+}
+/* iPhone 5, 5S, 5C, and 5SE */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+	#navigation {
+		font-size: 16px;
+	}
+
+	#navigation-albums, #navigation-about {
+		font-size: 16px;
+	}
+
+	img.logo, img.recent {
+		width: 300px;
+	}
+
+	img.image-about {
+		width: 300px;
+	}
+
+	img.wonderful {
+		width: 250px;
+		height: 190px;
+	}
+}
+div.card-album{
+  height: auto;
+}
+/* iPhone 6, 6S, 7, and 8 */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+	#navigation {
+		font-size: 18px;
+	}
+
+	#navigation-albums, #navigation-about {
+		font-size: 18px;
+	}
+
+	img.logo, img.recent {
+		width: 320px;
+	}
+
+	img.image-about {
+		width: 350px;
+	}
+
+	img.wonderful {
+		width: 270px;
+		height: 210px;
+	}
+}
+div.card-album{
+  height: auto;
+}
+/* iPhone 6+, 7+, 8+ */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+	#navigation {
+		font-size: 20px;
+	}
+
+	#navigation-albums, #navigation-about {
+		font-size: 20px;
+	}
+
+	img.logo, img.recent {
+		width: 350px;
+	}
+
+	img.image-about {
+		width: 600px;
+	}
+
+	img.wonderful {
+		width: 290px;
+		height: 230px;
+	}
+
+	#recent:before {
+		width: 100%;
+		height: 1024px;
+	}
+}
+div.card-album{
+  height: auto;
+}
+/* iPhone X */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+	#navigation {
+		font-size: 20px;
+	}
+
+	#navigation-albums, #navigation-about {
+		font-size: 20px;
+	}
+
+	img.logo, img.recent {
+		width: 350px;
+	}
+
+	img.image-about {
+		width: 400px;
+	}
+
+	img.wonderful {
+		width: 290px;
+		height: 230px;
+	}
+}
+div.card-album{
+  height: auto;
+}
